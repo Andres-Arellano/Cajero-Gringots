@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables, tipos de datos y operadores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Charm&family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <script src="ejercicios.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Banco Mágico Gringots</h1> 
+    </header>
+    <main>
+        <h2 class="quest">¿Quien eres?</h2>
+        <div class="pbox">
+            <h3>Ron</h3>
+            <button onclick="popUpR ()" id="ron">
+                <img class="profile" src="https://i.pinimg.com/736x/cd/2e/d1/cd2ed15d411f540fa51c90a8db8f419f.jpg" alt="Foto de perfil Ron Weasley">
+            </button>
+        </div>
+        <div class="pbox">
+            <h3>Hermione</h3>
+            <button onclick="popUpH ()" id="hermione">
+                <img class="profile" src="https://allimages.sgp1.digitaloceanspaces.com/tipeduvn/2022/05/Top-15-nhan-vat-duoc-yeu-thich-nhat-trong-Harry.jpg" alt="Foto de perfil Hermione Granger">
+            </button>
+        </div>
+        <div class="pbox">
+            <h3>Harry</h3>
+            <button onclick="popUp ()" id="harry">
+                <img class="profile" src="https://images.zwierciadlo.pl/_resource/res/path/a4/51/a4512475-cc48-4cac-b682-4a37b0672c2b_f750x750" alt="Foto de perfil Harry Potter">
+            </button>
+        </div>
+        <div class="popup1">
+            <div class="popUpContent">
+                <h2>¿Cual es el nombre de tu buho?</h2>
+                <input type="text" placeholder="Contraseña" id="hedwig">
+                <button id="ingresar" onclick="logInHarry ()">Ingresar</button>
+                <button onclick="byePopUp ()" id="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                      </svg>                      
+                </button>
+            </div>
+        </div>
+        <div class="popup2">
+            <div class="popUpContent">
+                <h2>¿Cual es el nombre de tu gato?</h2>
+                <input type="text" placeholder="Contraseña" id="crookshanks">
+                <button id="ingresar" onclick="logInHermione ()">Ingresar</button>
+                <button onclick="byePopUpH ()" id="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                      </svg>                      
+                </button>
+            </div>
+        </div>
+        <div class="popup3">
+            <div class="popUpContent">
+                <h2>¿Cual es el nombre de tu buho?</h2>
+                <input type="text" placeholder="Contraseña" id="pigwidgeon">
+                <button id="ingresar" onclick="logInRon ()">Ingresar</button>
+                <button onclick="byePopUpR ()" id="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                      </svg>                      
+                </button>
+            </div>
+        </div>
+    </main>
+    <div class="profiles1">
+        <div class="prof" id="profHarry">
+            <div>
+                <h1 class="welcome">Bienvenido Señor Harry Potter</h1>
+                <button onclick="saldo ()" class="mainbtn">Consultar saldo</button>
+                <p id="saldo"></p>
+            </div>
+            <div>
+                <h1>Realizar retiro de cuenta</h1>
+                <input id="monto" type="text" placeholder="Introduce el monto a retirar">
+                <button onclick="retiro ()">Retirar</button>
+                <p id="nuevoSaldo"></p>
+            </div>
+            <div>
+                <h1>Realizar depósito a la cuenta</h1>
+                <p id="pruebaSaldo"></p>
+                <input id="deposit" type="text" placeholder="Introduce el monto a depositar">
+                <button onclick="deposito ()">Depositar</button>
+                <p id="masSaldo"></p>
+            </div>
+            <div>
+                <h1 id="resultado"> 940 </h1>
+            </div>
+            <button class="closebank" onclick="byeBank ()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                      
+            </button>
+        </div>
+    </div>
+    <div class="profiles2">
+        <div class="prof" id="profHermione">
+            <div>
+                <h1 class="welcome">Bienvenida señorita Hermione</h1>
+                <button onclick="saldoH ()" class="mainbtn">Consultar saldo</button>
+                <p id="saldoH"></p>
+            </div>
+            <div>
+                <h1>Realizar retiro de cuenta</h1>
+                <input id="montoH" type="text" placeholder="Introduce el monto a retirar">
+                <button onclick="retiroH ()">Retirar</button>
+                <p id="nuevoSaldoH"></p>
+            </div>
+            <div>
+                <h1>Realizar depósito a la cuenta</h1>
+                <p id="pruebaSaldoH"></p>
+                <input id="depositH" type="text" placeholder="Introduce el monto a depositar">
+                <button onclick="depositoH ()">Depositar</button>
+                <p id="masSaldoH"></p>
+            </div>
+            <div>
+                <h1 id="resultadoH"> 230 </h1>
+            </div>
+            <button class="closebank" onclick="byeBankH ()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                      
+            </button>
+        </div>
+    </div>
+    <div class="profiles3">
+        <div class="prof" id="profRon">
+            <div>
+                <h1 class="welcome">Bienvenido señor Ron</h1>
+                <button onclick="saldoR ()" class="mainbtn">Consultar saldo</button>
+                <p id="saldoR"></p>
+            </div>
+            <div>
+                <h1>Realizar retiro de cuenta</h1>
+                <input id="montoR" type="text" placeholder="Introduce el monto a retirar">
+                <button onclick="retiroR ()">Retirar</button>
+                <p id="nuevoSaldoR"></p>
+            </div>
+            <div>
+                <h1>Realizar depósito a la cuenta</h1>
+                <p id="pruebaSaldoR"></p>
+                <input id="depositR" type="text" placeholder="Introduce el monto a depositar">
+                <button onclick="depositoR ()">Depositar</button>
+                <p id="masSaldoR"></p>
+            </div>
+            <div>
+                <h1 id="resultadoR"> 10 </h1>
+            </div>
+            <button class="closebank" onclick="byeBankR ()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                      
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
